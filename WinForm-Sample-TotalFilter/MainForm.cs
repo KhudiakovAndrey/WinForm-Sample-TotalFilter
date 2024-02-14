@@ -32,6 +32,7 @@ namespace WinForm_Sample_TotalFilter
         {
             Initialize();
         }
+        //Инициализация без фильтрации
         private void Initialize()
         {
             #region Адаптеры таблиц
@@ -106,6 +107,7 @@ namespace WinForm_Sample_TotalFilter
                 ExecutorFilterCB.Items.Add(refRow["FIO"].ToString());
             }
         }
+        //Инициализация с фильтрацией
         private void FilterInitialize()
         {
             //Адаптеры таблиц
@@ -151,7 +153,7 @@ namespace WinForm_Sample_TotalFilter
             }
         }
 
-        //RequestServicesDataSet.REQUESTSRow класс строки Заявки
+        //Метод фильтрации
         private bool Filtered(RequestServicesDataSet.REQUESTSRow input)
         {
             DataRow refRow;
